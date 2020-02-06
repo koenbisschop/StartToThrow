@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vierkant.cs" />
     <Compile Include="Cirkel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -55,6 +56,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vorm.cs" />
+    <Compile Include="VormenVerzameling.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

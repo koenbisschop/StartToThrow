@@ -20,24 +20,24 @@ namespace Vormen
 
         private void BtnMaken_Click(object sender, EventArgs e)
         {
-            UInt32 _straal = Convert.ToUInt32(txtStraal.Text);
+            UInt32 _straal = Convert.ToUInt32(txtGrootte.Text);
             try
             {
                 c = new Cirkel(_straal);
-                MessageBox.Show("Het maken van de cirkel is gelukt!");
-                MessageBox.Show("De cirkel heeft de straal " + c.Straal);
+                //MessageBox.Show("Het maken van de cirkel is gelukt!");
+                //MessageBox.Show("De cirkel heeft de straal " + c.Straal);
                 picBord.Invalidate();
                 listCirkels.Items.Add(c);
             }
             catch (Exception exc)
             {
-                txtStraal.BackColor = Color.Red;
+                txtGrootte.BackColor = Color.Red;
             }
         }
 
         private void TxtStraal_TextChanged(object sender, EventArgs e)
         {
-            txtStraal.BackColor = Color.White;
+            txtGrootte.BackColor = Color.White;
         }
 
         private void PicBord_Paint(object sender, PaintEventArgs e)

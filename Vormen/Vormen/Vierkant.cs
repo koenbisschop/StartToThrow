@@ -7,47 +7,46 @@ using System.Drawing;
 
 namespace Vormen
 {
-    class Cirkel: Vorm
+    class Vierkant: Vorm
     {
-        const UInt32 MAX_SIZE = 200;
-
-        UInt32 _straal;
-        public UInt32 Straal
+        const UInt32 MAX_SIZE = 100;
+        UInt32 _zijde;
+        public UInt32 Zijde
         {
             get
             {
-                return _straal;
+                return _zijde;
             }
             set
             {
                 if (value > MAX_SIZE)
                 {
                     //mag niet!
-                    throw new Exception("Straal is groter dan " + MAX_SIZE);
+                    throw new Exception("Zijde is groter dan " + MAX_SIZE);
                 }
                 else
                 {
-                    _straal = value;
+                    _zijde = value;
                 }
             }
         }
-        public Cirkel (UInt32 straal )
+        public Vierkant (UInt32 zijde )
         {
-            Straal = straal;
+            Zijde = zijde;
         }
 
         public void Paint(Graphics g)
         {
             Pen pen = new Pen(new SolidBrush(Color.Black));
             g.FillEllipse(new SolidBrush(Color.Yellow), 
-                Straal, Straal, Straal, Straal);
-            g.DrawEllipse(pen, Straal, Straal, Straal, Straal);
+                Zijde, Zijde, Zijde, Zijde);
+            g.DrawEllipse(pen, Zijde, Zijde, Zijde, Zijde);
 
         }
 
         public override String ToString()
         {
-            return $"cirkel {Nummer} met straal {Straal}";
+            return $"vierkant {Nummer} met straal {Zijde}";
         }
     }
 }
